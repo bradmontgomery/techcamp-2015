@@ -15,8 +15,8 @@
       h1, h2, h3 {
         font-family: 'Montserrat', sans-serif;
         font-weight: normal;
-        -webkit-text-stroke: 1px #1E426B;
-        text-shadow: 1px 1px 1px #9F8948;
+        -webkit-text-stroke: 2px #1E426B;
+        text-shadow: 1px 5px 5px #ccc;
         color:#FFD84D;
       }
       h1 {font-weight: 700;}
@@ -26,7 +26,7 @@
         color: #000000;
         padding: .1em .5em;
       }
-      a { color:#0000ff; text-decoration: none;}
+      a { color:#3355bb; text-decoration: none;}
       li {padding-bottom:.5em;}
       .remark-container {
           background: #6F8697;
@@ -56,69 +56,193 @@ Pythonista, Entrepreneur, MEMpy Organizer
 
 ---
 
-# Who is this guy?
+class: center, middle
+background-image: url(img/audience.jpg)
 
+# Audience?
 
 ---
 
-# So, what's a good way to learn?
+# Who is this guy?
+
+- Building the web since '99
+- Primarily w/ Python in 2008
+- &lt;3 Django
+- Organizer for [MEMpy](http://mempy.org)
+
+---
+
+# How do I learn Python?
 
 There are a lot of resources.
 
-- books
-- websites
-- youtube videos
-- tutorials on github
+- 100s of Books
+- Youtube videos
+- Codecademy,
+- EdX, Udemy, Coursera, Lynda
+- Thinkful
 
 ---
 
-# there are SO MANY RESOURCES!??!!11
+class: center, middle
 
-- it's overwhelming
-- pick one
+# OMG SO MANY OPTIONS!??!!11111one1
 
-![sad](http://data.whicdn.com/images/59909673/large.jpg)
+![omg](img/omg.gif)
 
-
----
-
-# python 2 or 3?
+_stop. relax. take a deep breath_
 
 ---
 
-# what's a cheese shop?
+class: center, middle
 
-- pypi (PYthon Package Index)
-- not to be confused with pypy
-- long ago was called the _cheese shop_ after a Monty Python sketch
+# Just pick one
+
+[Learn Python the Hard Way](http://learnpythonthehardway.org/)
+
+[Think Python](http://www.greenteapress.com/thinkpython/)
+
+[python.org](http://python.org)
+
+---
+
+class: center, middle
+
+# start practicing
+
+![practice](img/practice.gif)
+
+_programming: you learn by doing it_
+
+---
+
+# Python 2 or 3?
+
+- Python 3 is the future.
+- Learning? New Project? Python 3!
+- Both are still _Python_
 
 ---
 
 # virtualenv?
 
+- Virtual Environment
+- Self-contained python + packages
+- Your best friend
+
 ---
 
-# modules, packages, 3rd-party
+class: center, middle
+
+![venv part 1](img/venv-1.png)
 
 ---
+
+class: center, middle
+
+![venv part 2](img/venv-2.png)
+
+---
+
+class: center, middle
+
+![venv part 3](img/venv-3.png)
+
+---
+
+# The Standard Libary
+
+- _Batteries Included_
+- The tools that come bundled with python
+-
+
+---
+
+# 3rd-party Modules &amp; Packages
+
+- aka: community code
+- module == a file with python code
+- package == a directory with python code
+- Lots of Open Source
+- Preferred Licenses: MIT &amp; BSD
+- `pip`: pip installs packages
+
+---
+
+# What's a cheese shop?
+
+- The place to find other people's code
+- pypi (PYthon Package Index)
+- not to be confused with _pypy_
+- long ago was called the _cheese shop_ after a Monty Python sketch
+- `pip install django`
+
+---
+
+# Community
+
+- The PSF.
+- Code of Conduct: Open, Considerate, Respectful
+- Online: Mailing lists, IRC (#python on Freenode)
+- Conferences: [PyCon](https://us.pycon.org), [PyTN](https://www.pytennessee.org/)
+- Local meetups: [MEMpy](http://mempy.org)
+
+---
+
+class: center, middle
 
 # Python's just a scripting language, right?
 
+_a look at how python is used_
+
 ---
 
-# Web Apps
+# Web Apps / API-driven apps
+
+- [Reddit](https://github.com/reddit/reddit): 52.7% python
+- YouTube: Built python + apache + linux + mysql
+- Spotify
+- Instagram
+
+## Popular Frameworks
+
+- Django
+- Flask
+- Pyramid
+- Tornado
 
 ---
 
 # "DevOps"
 
+Infrastructure Automation &amp; Config management
+
+- [Ansible](https://github.com/ansible/ansible): 89% python
+- [Salt](https://github.com/saltstack/salt): 97% python
+
+---
+
+# "Desktop" applications
+
+- Dropbox
+- GIS Tools (e.g. ArcGIS)
+
 ---
 
 # Movies &amp; Special Effects!
 
+- [Blender](https://www.blender.org/)
+- ILM: Industrial Light and Magic
+  - Started using Python 1.4 mid-1990s
+  - Embedded in Custom C applications
+
 ---
 
 # Gaming
+
+- [EVE Online](http://www.eveonline.com/)
+- [Minecraft Pi](https://www.raspberrypi.org/learning/getting-started-with-minecraft-pi/)
+- [PyGame](http://www.pygame.org/): Great for Learning &amp; Hobby
 
 ---
 
@@ -126,18 +250,20 @@ There are a lot of resources.
 
 (importing &amp; exporting CSV files)
 
----
-
-# Data Analysis
+- `import csv`
 
 ---
 
-# Scientific Computing
+# Data Analysis / Scientific Computing
+
+- pandas, scipy, scikit-learn
+
 
 ---
 
 # Financial Analysis
 
+- more of the above
 
 ---
 
@@ -158,26 +284,18 @@ Yes?
 
 ---
 
-background-image: url(https://c1.staticflickr.com/1/379/18784566518_766b3d5db0_h.jpg)
-
-# And here's a background image.
-
-Wheeee
-
-
----
-
 # Colophon
 
 These slides were built with the following:
 
 - [remark](http://gnab.github.io/remark/)
-- Fonts: Montserrat, Merriweather, Anonymous Pro (Google Fonts)
+- Fonts: Montserrat, Merriweather, Anonymous Pro
 - [Highlight.js](https://highlightjs.org/) is _built in to remark_
 - `-webkit-text-stroke: 1px #1E426B;`
+- Computer by [Edward Boatman from Noun Project](https://thenounproject.com/search/?q=computer&i=115)
 
     </textarea>
-    <script src="https://gnab.github.io/remark/downloads/remark-latest.min.js">
+    <script src="js/remark-latest.min.js">
     </script>
     <script>
       var slideshow = remark.create({
