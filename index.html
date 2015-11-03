@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Title</title>
+    <meta charset="utf-8">
+    <style>
+      @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+      @import url(https://fonts.googleapis.com/css?family=Merriweather:400,700,400italic);
+      @import url(https://fonts.googleapis.com/css?family=Anonymous+Pro:400,700,400italic);
+
+      body {
+        font-family: 'Merriweather';
+        color:#171E27;
+      }
+      h1, h2, h3 {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: normal;
+        -webkit-text-stroke: 1px #1E426B;
+        text-shadow: 1px 1px 1px #9F8948;
+        color:#FFD84D;
+      }
+      h1 {font-weight: 700;}
+      .remark-code, .remark-inline-code {
+        font-family: 'Anonymous Pro';
+        background-color: #ddd;
+        color: #000000;
+        padding: .1em .5em;
+      }
+      a { color:#0000ff; text-decoration: none;}
+      li {padding-bottom:.5em;}
+      .remark-container {
+          background: #6F8697;
+          margin: 0;
+          overflow: hidden;
+      }
+      .remark-slide-content {
+        background-color: #fff;
+        background-position: center;
+        background-repeat: no-repeat;
+        display: table-cell;
+        font-size: 26px;
+        padding: 1em 4em 1em 4em;
+      }
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+
+class: center, middle
+
+# The Python Ecosystem
+
+**Brad Montgomery**
+
+Pythonista, Entrepreneur, MEMpy Organizer
+
+---
+
+# Who is this guy?
+
+
+---
+
+# So, what's a good way to learn?
+
+There are a lot of resources.
+
+- books
+- websites
+- youtube videos
+- tutorials on github
+
+---
+
+# there are SO MANY RESOURCES!??!!11
+
+- it's overwhelming
+- pick one
+
+![sad](http://data.whicdn.com/images/59909673/large.jpg)
+
+
+---
+
+# python 2 or 3?
+
+---
+
+# what's a cheese shop?
+
+- pypi (PYthon Package Index)
+- not to be confused with pypy
+- long ago was called the _cheese shop_ after a Monty Python sketch
+
+---
+
+# virtualenv?
+
+---
+
+# modules, packages, 3rd-party
+
+---
+
+# Python's just a scripting language, right?
+
+---
+
+# Web Apps
+
+---
+
+# "DevOps"
+
+---
+
+# Movies &amp; Special Effects!
+
+---
+
+# Gaming
+
+---
+
+# Enterprise Data Transport
+
+(importing &amp; exporting CSV files)
+
+---
+
+# Data Analysis
+
+---
+
+# Scientific Computing
+
+---
+
+# Financial Analysis
+
+
+---
+
+# And, here's an example.
+
+```
+def add(a,b):
+  if a is not None:
+    a = "Some value?"
+    if not isnumeric(a):
+      a = 3
+  return a + b  # Easy, no?
+
+```
+
+Yes?
+
+
+---
+
+background-image: url(https://c1.staticflickr.com/1/379/18784566518_766b3d5db0_h.jpg)
+
+# And here's a background image.
+
+Wheeee
+
+
+---
+
+# Colophon
+
+These slides were built with the following:
+
+- [remark](http://gnab.github.io/remark/)
+- Fonts: Montserrat, Merriweather, Anonymous Pro (Google Fonts)
+- [Highlight.js](https://highlightjs.org/) is _built in to remark_
+- `-webkit-text-stroke: 1px #1E426B;`
+
+    </textarea>
+    <script src="https://gnab.github.io/remark/downloads/remark-latest.min.js">
+    </script>
+    <script>
+      var slideshow = remark.create({
+        highlightLanguage: 'python',
+        highlightStyle: 'default',
+        highlightLines: true,
+      });
+    </script>
+  </body>
+</html>
