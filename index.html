@@ -15,11 +15,14 @@
       h1, h2, h3 {
         font-family: 'Montserrat', sans-serif;
         font-weight: normal;
-        -webkit-text-stroke: 2px #1E426B;
+        -webkit-text-stroke: 1px #1E426B;
         text-shadow: 1px 5px 5px #ccc;
         color:#FFD84D;
       }
-      h1 {font-weight: 700;}
+      h1 {
+        font-weight: 700;
+        -webkit-text-stroke: 2px #1E426B;
+      }
       .remark-code, .remark-inline-code {
         font-family: 'Anonymous Pro';
         background-color: #ddd;
@@ -52,7 +55,6 @@ class: center, middle
 
 **Brad Montgomery**
 
-Pythonista, Entrepreneur, MEMpy Organizer
 
 ---
 
@@ -67,8 +69,9 @@ background-image: url(img/audience.jpg)
 
 - Building the web since '99
 - Primarily w/ Python in 2008
+- _former instructor_
 - &lt;3 Django
-- Organizer for [MEMpy](http://mempy.org)
+- Organizer for [MEMpy](http://mempy.org)<sup>*</sup>
 
 ---
 
@@ -76,11 +79,10 @@ background-image: url(img/audience.jpg)
 
 There are a lot of resources.
 
-- 100s of Books
+- 100's of Books
 - Youtube videos
-- Codecademy,
-- EdX, Udemy, Coursera, Lynda
-- Thinkful
+- Codecademy, EdX, Udemy, Coursera, Lynda
+- [Thinkful](https://thinkful.com) &amp; Code Schools
 
 ---
 
@@ -152,17 +154,29 @@ class: center, middle
 
 # The Standard Libary
 
-- _Batteries Included_
-- The tools that come bundled with python
--
+_Batteries Included_ (come bundled with python)
+
+- `datetime` &amp; `calendar`
+- `collections`
+- `os`
+- `csv`
+- See: https://docs.python.org/3.4/library/
+
+
+```
+&gt;&gt;&gt; import uuid
+&gt;&gt;&gt; print(uuid.uuid4())
+9ae9b3f5-c02b-4ec6-9bf6-c7f0155fa1c7
+
+```
 
 ---
 
 # 3rd-party Modules &amp; Packages
 
 - aka: community code
-- module == a file with python code
-- package == a directory with python code
+- *module*: a file with python code
+- *package*: a directory with python code
 - Lots of Open Source
 - Preferred Licenses: MIT &amp; BSD
 - `pip`: pip installs packages
@@ -184,6 +198,8 @@ class: center, middle
 - The PSF.
 - Code of Conduct: Open, Considerate, Respectful
 - Online: Mailing lists, IRC (#python on Freenode)
+  - Twitter
+  - G+
 - Conferences: [PyCon](https://us.pycon.org), [PyTN](https://www.pytennessee.org/)
 - Local meetups: [MEMpy](http://mempy.org)
 
@@ -197,7 +213,7 @@ _a look at how python is used_
 
 ---
 
-# Web Apps / API-driven apps
+# Web Apps / API's
 
 - [Reddit](https://github.com/reddit/reddit): 52.7% python
 - YouTube: Built python + apache + linux + mysql
@@ -219,6 +235,7 @@ Infrastructure Automation &amp; Config management
 
 - [Ansible](https://github.com/ansible/ansible): 89% python
 - [Salt](https://github.com/saltstack/salt): 97% python
+- Yes, "scripting"
 
 ---
 
@@ -227,60 +244,155 @@ Infrastructure Automation &amp; Config management
 - Dropbox
 - GIS Tools (e.g. ArcGIS)
 
+## Tools
+
+- [Kivy](http://kivy.org/) - cross-platform, multi-touch
+- GTk &amp; Qt both have python wrappers
+- Cocoa &amp; PyObjC (for OS X)
+
 ---
 
 # Movies &amp; Special Effects!
 
-- [Blender](https://www.blender.org/)
 - ILM: Industrial Light and Magic
   - Started using Python 1.4 mid-1990s
   - Embedded in Custom C applications
+- Common in the Visual Effects (VFX) industry
+
+## Tools
+
+- [Blender](https://www.blender.org/)
+-  Maya, Nuke, Mari, Houdini, Shotgun
 
 ---
 
-# Gaming
+# Games
 
 - [EVE Online](http://www.eveonline.com/)
 - [Minecraft Pi](https://www.raspberrypi.org/learning/getting-started-with-minecraft-pi/)
+
+## Tools
+
 - [PyGame](http://www.pygame.org/): Great for Learning &amp; Hobby
+- [Kivy](https://kivy.org)
 
 ---
 
-# Enterprise Data Transport
+# Enterprise Data
 
 (importing &amp; exporting CSV files)
 
-- `import csv`
+```
+import csv
+
+with open('some_file.csv') as csvfile:
+  reader = csv.reader(csvfile)
+  for row in reader:
+    print(row[0])  # data in the first column
+
+```
+
+- ETL developers are increasingly using python
 
 ---
 
 # Data Analysis / Scientific Computing
 
-- pandas, scipy, scikit-learn
+- Academics &amp; Scientists
+- Financial Institutions
+
+## Tools
+
+- SciPy
+- NumPy
+- Pandas
+- scikit-learn
+
+---
+
+# PEPs
+
+---
+
+# Anaconda by Continuum Analytics
+
+- Analytics Platform
+- a distribution of python + data science tools
+- provides different tools (e.g. `conda`) for installing 3rd-party packages
+- Commercial Support
+- https://continuum.io
+
+---
+
+class: center, middle
+
+# Excited Yet?
+
+![excited](img/patrick-excited.gif)
+
+---
+
+class: center, middle
+
+# Overwhelmed?
+
+![excited](img/overwhelmed.gif)
+
+---
+
+# MEMpy
+
+- The Memphis Python User Group
+- http://mempy.org
+
+---
+
+# The Zen of Python
+
+```
+&gt;&gt;&gt; import this
+
+```
+
+---
+
+- Beautiful is better than ugly.
+- Explicit is better than implicit.
+- Simple is better than complex.
+- Complex is better than complicated.
+- Flat is better than nested.
+- Sparse is better than dense.
+- Readability counts.
+- Special cases aren't special enough to break the rules.
+- Although practicality beats purity.
+- Errors should never pass silently.
+- Unless explicitly silenced.
+
+---
+
+- In the face of ambiguity, refuse the temptation to guess.
+- There should be one-- and preferably only one --obvious way to do it.
+- Although that way may not be obvious at first unless you're Dutch.
+- Now is better than never.
+- Although never is often better than *right* now.
+- If the implementation is hard to explain, it's a bad idea.
+- If the implementation is easy to explain, it may be a good idea.
+- Namespaces are one honking great idea -- let's do more of those!
 
 
 ---
 
-# Financial Analysis
+class: center, middle
 
-- more of the above
+# The Hitchhiker's Guide to Python
+
+http://docs.python-guide.org
 
 ---
 
-# And, here's an example.
+class: center, middle
 
-```
-def add(a,b):
-  if a is not None:
-    a = "Some value?"
-    if not isnumeric(a):
-      a = 3
-  return a + b  # Easy, no?
-
-```
-
-Yes?
-
+# Questions?
 
 ---
 
