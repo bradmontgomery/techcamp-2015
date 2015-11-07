@@ -3,6 +3,7 @@
   <head>
     <title>Title</title>
     <meta charset="utf-8">
+    <link rel="icon" type="image/png" href="img/BM.png">
     <style>
       @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
       @import url(https://fonts.googleapis.com/css?family=Merriweather:400,700,400italic);
@@ -13,11 +14,12 @@
         color:#171E27;
       }
       h1, h2, h3 {
+        color:#FFD84D;
         font-family: 'Montserrat', sans-serif;
         font-weight: normal;
         -webkit-text-stroke: 1px #1E426B;
+        -webkit-text-fill-color:#FFD84D;
         text-shadow: 1px 5px 5px #ccc;
-        color:#FFD84D;
       }
       h1 {
         font-weight: 700;
@@ -44,6 +46,13 @@
         font-size: 26px;
         padding: 1em 4em 1em 4em;
       }
+      img {
+        border-radius: 20px;
+      }
+      .pull-right {
+        display:inline;
+        float: right;
+      }
     </style>
   </head>
   <body>
@@ -65,11 +74,33 @@ background-image: url(img/audience.jpg)
 
 ---
 
+# Code examples...
+
+- `&gt;&gt;&gt;` typed in the python shell (aka the REPL)
+- `import csv` - typically saved in a file.
+
+## Example from the shell
+
+```
+&gt;&gt;&gt; print('Hello World')
+Hello World
+```
+
+## Example from a file
+
+```
+import hashlib
+key = hashlib.md5("whee".encode('utf8')).hexdigest()
+print(key)  # eaaff0f66f4f3bc0a1acc9820b3666de
+```
+---
+
 # Who is this guy?
 
 - Building the web since '99
 - Primarily w/ Python in 2008
 - _former instructor_
+- Did some startups (currently @ [tndata.org](http://tndata.org))
 - &lt;3 Django
 - Organizer for [MEMpy](http://mempy.org)<sup>*</sup>
 
@@ -78,9 +109,11 @@ background-image: url(img/audience.jpg)
 # How do I learn Python?
 
 There are a lot of resources.
+<img src="img/excited.gif" class="pull-right">
 
-- 100's of Books
-- Youtube videos
+- 100's of Free Books
+- 1000's of online tutorials
+- YouTube videos
 - Codecademy, EdX, Udemy, Coursera, Lynda
 - [Thinkful](https://thinkful.com) &amp; Code Schools
 
@@ -124,6 +157,26 @@ _programming: you learn by doing it_
 - Learning? New Project? Python 3!
 - Both are still _Python_
 
+## this is python 2 &amp; 3
+
+```
+&gt;&gt;&gt; import random
+&gt;&gt;&gt; from string import ascii_letters
+&gt;&gt;&gt; "".join([random.choice(ascii_letters) for i in range(10)])
+'IWdkVpderL'
+```
+
+---
+
+# python 3
+
+- 3.0 released in Dec 2008
+- 3.1 released in Jun 2009
+- 3.2 released in Feb 2011
+- 3.3 released in Sep 2012
+- 3.4 released in Mar 2014
+- 3.5 released in Sep 2015
+
 ---
 
 # virtualenv?
@@ -131,6 +184,7 @@ _programming: you learn by doing it_
 - Virtual Environment
 - Self-contained python + packages
 - Your best friend
+- (like bash, ksh, zsh? get [virtualenvwrapper](https://virtualenvwrapper.readthedocs.org/en/latest/), too)
 
 ---
 
@@ -149,6 +203,16 @@ class: center, middle
 class: center, middle
 
 ![venv part 3](img/venv-3.png)
+
+---
+
+class: center, middle
+
+# 100% worth it
+
+spend a day to learn how to use virtualenvs
+
+![you can do it](img/youcandoit.gif)
 
 ---
 
@@ -200,8 +264,8 @@ _Batteries Included_ (come bundled with python)
 - Online: Mailing lists, IRC (#python on Freenode)
   - Twitter
   - G+
-- Conferences: [PyCon](https://us.pycon.org), [PyTN](https://www.pytennessee.org/)
-- Local meetups: [MEMpy](http://mempy.org)
+- Conferences: [PyCon](https://us.pycon.org), [PyTN](https://www.pytennessee.org/) (_Feb 6-7 2016_)
+- Local meetups: [MEMpy](http://mempy.org) (_Nov 16_)
 
 ---
 
@@ -209,11 +273,18 @@ class: center, middle
 
 # Python's just a scripting language, right?
 
-_a look at how python is used_
+can you really do _serious_ work?
 
 ---
 
-# Web Apps / API's
+class: center, middle
+
+![serious](img/serious.gif)
+
+
+---
+
+# Web Apps / APIs
 
 - [Reddit](https://github.com/reddit/reddit): 52.7% python
 - YouTube: Built python + apache + linux + mysql
@@ -310,10 +381,6 @@ with open('some_file.csv') as csvfile:
 
 ---
 
-# PEPs
-
----
-
 # Anaconda by Continuum Analytics
 
 - Analytics Platform
@@ -326,12 +393,19 @@ with open('some_file.csv') as csvfile:
 
 class: center, middle
 
+# Enterprise Data Science VFX Game for FinTech
+
+with a devops api
+
+---
+
+class: center, middle
+
 # Excited Yet?
 
 ![excited](img/patrick-excited.gif)
 
 ---
-
 class: center, middle
 
 # Overwhelmed?
@@ -344,6 +418,8 @@ class: center, middle
 
 - The Memphis Python User Group
 - http://mempy.org
+- Nov 16, CoWork Memphis (902 Cooper)
+- Distribution, Documentation, Continuous Integration
 
 ---
 
@@ -357,15 +433,15 @@ class: center, middle
 ---
 
 - Beautiful is better than ugly.
-- Explicit is better than implicit.
+- **Explicit is better than implicit.**
 - Simple is better than complex.
 - Complex is better than complicated.
-- Flat is better than nested.
+- **Flat is better than nested.**
 - Sparse is better than dense.
-- Readability counts.
+- **Readability counts.**
 - Special cases aren't special enough to break the rules.
 - Although practicality beats purity.
-- Errors should never pass silently.
+- **Errors should never pass silently.**
 - Unless explicitly silenced.
 
 ---
@@ -374,11 +450,10 @@ class: center, middle
 - There should be one-- and preferably only one --obvious way to do it.
 - Although that way may not be obvious at first unless you're Dutch.
 - Now is better than never.
-- Although never is often better than *right* now.
+- **Although never is often better than *right* now.**
 - If the implementation is hard to explain, it's a bad idea.
-- If the implementation is easy to explain, it may be a good idea.
+- **If the implementation is easy to explain, it may be a good idea.**
 - Namespaces are one honking great idea -- let's do more of those!
-
 
 ---
 
@@ -394,6 +469,9 @@ class: center, middle
 
 # Questions?
 
+These slides available at
+[github.com/bradmontgomery/techcamp-2015](https://github.com/bradmontgomery/techcamp-2015)
+
 ---
 
 # Colophon
@@ -405,6 +483,14 @@ These slides were built with the following:
 - [Highlight.js](https://highlightjs.org/) is _built in to remark_
 - `-webkit-text-stroke: 1px #1E426B;`
 - Computer by [Edward Boatman from Noun Project](https://thenounproject.com/search/?q=computer&i=115)
+
+---
+
+class: center, middle
+
+# thank you
+
+![thanks](img/dr.gif)
 
     </textarea>
     <script src="js/remark-latest.min.js">
